@@ -1,9 +1,11 @@
-fetchData();
+
 
 async function fetchData(){
 
     try{
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/golurk");
+        const pokemonName = document.getElementById("pokemonName").value;
+
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon/${pokemonName}");
 
         if(!response.ok){
             throw new Error("Could not find");
