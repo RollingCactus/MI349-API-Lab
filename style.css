@@ -1,4 +1,5 @@
 
+/* Main page */
 body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
@@ -6,39 +7,119 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 
     text-align: center;
+
     margin: 0;
-    padding-top: 40px;
+    padding: 30px 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
+/* Main heading */
 h1 {
-    margin-bottom: 20px;
+    color: #e3350d;
+    margin-bottom: 25px;
 }
 
+/* Search area */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+/* Search input */
 input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    padding: 12px;
     border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
+/* Buttons */
 button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
+    padding: 12px 18px;
     background-color: #e3350d;
     color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #b52a0b;
 }
 
-img {
-    margin-top: 20px;
+/* Pokemon information */
+#pokemonInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Pokemon name */
+#name {
+    text-transform: capitalize;
+}
+
+/* Pokemon image */
+#pokemonSprite {
     width: 200px;
     height: 200px;
     object-fit: contain;
+}
+
+/* Stats */
+#stats {
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+
+.stat {
+    padding: 5px;
+}
+
+/* Locations */
+#locations {
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.location {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.location:last-child {
+    border-bottom: none;
+}
+
+/* Mobile support */
+@media (max-width: 450px) {
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input,
+    button {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
